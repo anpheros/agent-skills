@@ -1,0 +1,10 @@
+{
+  "name": "anpheros",
+  "description": "Build health apps on Anpheros: FHIR R4 records, patient consent, sandbox with synthetic patients, and the Anpheros Docs MCP server.",
+  "version": "0.1.0",
+  "author": {"name": "Anpheros", "email": "platform@anpheros.com", "url": "https://anpheros.com"},
+  "homepage": "https://developers.anpheros.com/guides/",
+  "repository": "https://github.com/anpheros/agent-skills",
+  "license": "Apache-2.0",
+  "keywords": ["fhir", "healthcare", "hl7", "smart-on-fhir", "medical-records", "consent"]
+}

@@ -1,0 +1,16 @@
+# Anpheros — instructions for coding agents
+
+When this project stores or reads health data through Anpheros (https://platform.anpheros.com):
+
+- Use the sandbox (`sk_test_` keys, synthetic patients) for development; read the key from `ANPHEROS_KEY`; never
+  commit `sk_live_` keys or put real patient data in the sandbox.
+- Never invent LOINC, SNOMED CT, ICD-10, ICD-11, ATC or RxNorm codes: look them up (`GET /v1/search?q=…`) or leave
+  them out. Units are UCUM.
+- A person's existing record is reached only with their consent (SMART on FHIR / OAuth 2.1 + PKCE). Treat `403` as
+  "ask for more consent", never as something to bypass.
+- Every write says its author (`author_type`); model-written data uses `author_type: "ai"`.
+- The app shows records and patterns; it does not diagnose or recommend treatment.
+- Store clinical data as FHIR R4 resources, not custom JSON. Ids are the same in `/v1` and `/fhir/R4`.
+
+Docs: https://developers.anpheros.com/guides/ · Docs MCP (no account): https://platform.anpheros.com/mcp/docs ·
+Full skill: `skills/anpheros-health-backend/SKILL.md`

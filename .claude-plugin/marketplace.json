@@ -1,0 +1,5 @@
+{
+  "name": "anpheros",
+  "owner": {"name": "Anpheros", "email": "platform@anpheros.com"},
+  "plugins": [{"name": "anpheros", "source": "./", "description": "Anpheros health backend skill + Docs MCP server"}]
+}
